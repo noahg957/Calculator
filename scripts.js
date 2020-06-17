@@ -92,6 +92,10 @@ operators.forEach((op) => {
 })
 const equals = document.querySelector('#equals')
 equals.addEventListener('click', () => {
+    if(operator == '') {
+        header.textContent = num1
+    }
+    else {
     if(num2 == '0' && operator == '/') {
         header.textContent = "Don't divide by 0, silly!"
         operator = ''
@@ -107,5 +111,5 @@ equals.addEventListener('click', () => {
     display = result
     operator = ''
     }
-
+    }
 })
