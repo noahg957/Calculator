@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    background-color: #FFFFC7;
+}
+.container {
+    background-color: #62BEC1;
+    width: 28rem;
+    height: 36rem;
+    border: 0.75rem solid #1C3144;
+    border-radius: 2rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    "head head head head"
+    "head head head head"
+    "number op op op"
+    "number number number  op"
+    "number number number op"
+    "number number number op";
+    column-gap: 1rem;
+    row-gap: 1rem;
+
+}
+.center {
+    margin: auto;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+.button {
+    background-color: #1C3144;
+    width: auto;
+    height: auto;
+    border-radius: 1rem;
+    text-align: center;
+    line-height: 82.656px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 40px;
+    box-shadow: -0.1rem -0.5rem 0 0 #0D1720 inset;
+    transition-duration: 0.1s;
+    user-select: none;
+    
+}
+.button:active {
+    box-shadow: -0.1rem -0.2rem 0 0 #0D1720 inset;
+    transform: translateY(0.3rem);
+}
+.button:hover {
+    cursor: pointer;
+    background-color: #18293A;
+
+
+}
+.header {
+    grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 40px;
+    color: #FFFCFF;
+    text-align: start;
+    padding: 2rem;
+    line-height: 32px;
+    overflow: scroll;
+
+}
+.header:active {
+    transform: none;
+    box-shadow: -0.1rem -0.5rem 0 0 #0D1720 inset;
+}
+.header:hover {
+    cursor: auto;
+    background-color: #1C3144;
+
+}
+.clear {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    font-size: 25px;
+}
+.number {
+    color: #EA7317;
+}
+.op {
+    color: #FEC601;
+}
+#equals {
+    color: #FEC601;
+}
